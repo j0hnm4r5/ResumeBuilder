@@ -1,0 +1,8 @@
+block publications
+	.publications
+		h3 Publications
+		ul#pubs
+			each pub in publications
+				li.pub
+					h4
+						!= pub.authors + ". " + pub.date.getUTCFullYear() + ". <strong>" + pub.name + "</strong>. <em>" + pub.publisher + "</em>. "

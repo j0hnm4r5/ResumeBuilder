@@ -1,0 +1,21 @@
+{
+  "name": "yaml-resume",
+  "version": "0.0.1",
+  "description": "A resume generator for a YAML resume",
+  "author": "John Mars",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marsman12019/yaml-resume"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "html5-to-pdf": "^2.1.1",
+    "pug": "^2.0.0-beta6",
+    "yamljs": "^0.2.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.10"
+  }
+}

@@ -1,0 +1,13 @@
+block skills
+	.skills
+		h3 Skills
+		ul
+			each skill in skills
+				li.skill
+					h4
+						!= "<strong>" + skill.type + "</strong>"
+						
+					ul
+						each item in skill.keywords
+							li.keyword
+								!= item

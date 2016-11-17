@@ -1,0 +1,14 @@
+block education
+	.education
+		h3 Education
+		ul#schools
+			each school in education
+				li.school 
+					h4
+						!= "<strong>" + school.degree + "</strong>" + " (" + school.degAbbr + "), " + school.instAbbr + "<em>" + " — " + school.endDate.getUTCFullYear() + "</em>"
+					//- if school.curriculum
+					//- 	ul
+					//- 		!= "<strong>" + "Curriculum:" + "</strong>"
+					//- 		each course in school.curriculum
+					//- 			li.course
+					//- 				!= course

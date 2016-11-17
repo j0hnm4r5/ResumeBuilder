@@ -1,0 +1,13 @@
+block work
+	.work
+		h3 Experience
+		ul#experiences
+			each job in work
+				li.experience
+					h4.job
+						!= "<strong>" + job.position + "</strong>" + ", " + job.company + "<em>"  + " — " + (job.hasOwnProperty("endDate") ? (job.startDate.getUTCFullYear() == job.endDate.getUTCFullYear() ? job.startDate.getUTCFullYear() : job.startDate.getUTCFullYear() + " - " + job.endDate.getUTCFullYear()) : job.startDate.getUTCFullYear() + " - " + "Present") + "</em>"
+					if job.highlights
+						ul
+							each highlight in job.highlights
+								li.jobHighlight
+									!= highlight

@@ -5,6 +5,6 @@ resume.pdf
 resume.json
 .DS_Store
 
-
+EXPORTS/*
 index.html
 resume.yaml

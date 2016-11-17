@@ -1,0 +1,10 @@
+block teaching
+	.teaching
+		h3 Teaching
+		ul#courses
+			each course in teaching
+				li.course
+					h4.coursePosition
+						!= "<strong>" + course.position + "</strong>" + ", " + course.institution + "<em>" + " — " + course.date + "</em>"
+					.courseDescription
+						!= course.description

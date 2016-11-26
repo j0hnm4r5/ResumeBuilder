@@ -1,5 +1,8 @@
 # YAML Resume Generator
 
-Feed me a resume in a YAML format (./resume.yaml), run `gulp build`, and get a PDF and HTML doc back.
-
-This does not follow jsonresume/resume-schema anymore (I found parts of it very strange).
+### How to use
+1. Install [Node](https://nodejs.org/en/download/) (easist way is with [Homebrew](http://brew.sh/), on a Mac: `brew install node`)
+2. Install [Gulp](http://gulpjs.com/) globally: `npm install -g gulp-cli`
+3. Install all the required packages: `cd` into the repo, then `npm install`
+4. Create your own resume in YAML form named "resume.yaml" in the project root directory
+5. Run `gulp dev` to begin live development, or `gulp build` to just create the HTML and PDF without all that fancy LiveReload stuff

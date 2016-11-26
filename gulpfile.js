@@ -10,7 +10,21 @@ var HTMLToPDF = require('html5-to-pdf');
 
 gulp.task('build', function() {
 
-	var resumeData = YAML.load("resume.yaml");
+	console.log("Checking for resume...");
+
+	try {
+
+	    fs.accessSync("resume.yaml", fs.F_OK);
+	    
+	    console.log("Found your resume! Building it now.");
+        var resumeData = YAML.load("resume.yaml");
+
+	} catch (e) {
+	    
+	    console.log("resume.yaml could not be found. Loading example resume.");
+        var resumeData = YAML.load("example_resume.yaml");
+
+	}
 
 	var html = pug.renderFile("./resume.pug", resumeData);
 
@@ -25,7 +39,7 @@ gulp.task('build', function() {
 	var htmlToPDF = new HTMLToPDF({
 	  // inputBody: html,
 	  inputPath: "./index.html",
-	  outputPath: "./EXPORTS/JohnMars_Resume_" + today.getUTCFullYear() + today.getUTCMonth() + today.getUTCDate() + ".pdf",
+	  outputPath: "./EXPORTS/" + resumeData.bio.name.replace(/\s+/g, '') + "_Resume_" + today.getUTCFullYear() + today.getUTCMonth() + today.getUTCDate() + ".pdf",
 	  pageSize: 'Letter',
 	  templatePath: "./"
 	});

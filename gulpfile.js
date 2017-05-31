@@ -45,7 +45,9 @@ gulp.task('build', function() {
 	});
 
 	htmlToPDF.build(function(err) {
-		console.log("Error: " + err);
+		if (err != null) {
+			console.log("Error: " + err);
+		}
 		console.log("PDF Generated!");
 	});
 

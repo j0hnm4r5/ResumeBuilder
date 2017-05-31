@@ -5,4 +5,15 @@ block publications
 			each pub in publications
 				li.pub
 					h4
-						!= pub.authors + ". " + pub.date.getUTCFullYear() + ". <strong>" + pub.name + "</strong>. <em>" + pub.publisher + "</em>. "
+						!= "<strong>" + pub.name + "</strong>, " + pub.publisher + " <em> — " + pub.date + "</em>"
+
+					each name, index in pub.authors.split(" and ")
+						if name == "Mars, John"
+							!= "<u>"
+						if name.split(", ")[1] != null
+							!= name.split(", ")[0] + ", " + name.split(", ")[1].charAt(0) + "."
+						if name == "Mars, John"
+							!= "</u>"
+						if index < pub.authors.split(" and ").length - 1
+							!= ", "
+						

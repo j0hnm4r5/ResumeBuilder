@@ -1,0 +1,10 @@
+block awards
+	.honorsAndawards
+		h3 Awards
+		ul#awards
+			each award in awards
+				li.award
+					span.heavy #{award.title}, 
+					span #{award.awarder} 
+					span — 
+					span.emphasis #{new Date(award.date).getUTCFullYear()}

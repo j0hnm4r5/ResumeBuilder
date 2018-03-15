@@ -1,8 +1,0 @@
-block awards
-	.honorsAndawards
-		h2 Awards
-		ul#awards
-			each award in awards
-				li.award
-					h4
-						!= "<strong>" + award.title + "</strong>" + ", " + award.awarder + "<em>" + " — " + award.date.getUTCFullYear() + "</em>"

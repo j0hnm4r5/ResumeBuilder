@@ -1,21 +1,40 @@
 {
-  "name": "yaml-resume",
-  "version": "0.0.1",
-  "description": "A resume generator for a YAML resume",
-  "author": "John Mars",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/marsman12019/yaml-resume"
-  },
+  "name": "ResumeBuilder",
+  "version": "1.0.0",
+  "description": "A resume creator from structured data",
+  "author": "John Mars <john@M4R5.io> (http://M4R5.io)",
+  "repository": "github:j0hnm4r5/ResumeBuilder",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
-    "html5-to-pdf": "^2.1.1",
-    "pug": "^2.0.0-beta6",
-    "yamljs": "^0.2.8"
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.17.6",
-    "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.10"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "html-webpack-plugin": "^3.0.6",
+    "html-webpack-template": "^6.1.0",
+    "imports-loader": "^0.8.0",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.1",
+    "pug-loader": "https://github.com/pugjs/pug-loader/tarball/master",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1",
+    "yaml-loader": "^0.5.0"
   }
 }

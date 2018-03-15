@@ -1,0 +1,11 @@
+block publications
+	.publications
+		h3 Publications
+		ul#pubs
+			each pub in publications
+				li.pub
+					span #{pub.authors}. #{new Date(pub.date).getUTCFullYear()}. 
+					span.heavy #{pub.name}
+					span . 
+					span.emphasis #{pub.publisher}
+					span .

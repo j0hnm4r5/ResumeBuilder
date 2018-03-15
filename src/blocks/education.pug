@@ -1,0 +1,17 @@
+#education.section
+	h3 Education
+
+	ul#schools
+		each institution in education
+			li.institution
+				span.heavy #{institution.degree} (#{institution.degAbbr}), 
+				span #{institution.name} (#{institution.instAbbr}) 
+				span — 
+				span.emphasis #{new Date(institution.endDate).getUTCFullYear()}
+				
+				//- optional curriculum
+				if institution.curriculum
+					ul
+						span.underline Curriculum
+						each course in institution.curriculum
+							li.course #{course}

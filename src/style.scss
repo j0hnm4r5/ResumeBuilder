@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto+Condensed:300,300i,400,400i,700,700i");
+
 html {
-	font-size: 12pt;
+	font-size: 10pt;
 }
 
 body {
 	background-color: white;
-	font-family: 'Brandon Grotesque', sans-serif;
+	font-family: "Fira Mono", monospace;
 	line-height: 1.45;
 	color: #333;
-	margin: 6em;
+	margin: 50px;
 }
 
 p {
@@ -21,7 +23,7 @@ h4 {
 	margin: 1em 0 0.5em;
 	font-weight: inherit;
 	line-height: 1.1;
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 }
 
 h1 {
@@ -35,7 +37,6 @@ h2 {
 }
 
 h3 {
-	margin-top: 4em;
 	font-size: 1.777em;
 }
 
@@ -63,7 +64,6 @@ em {
 
 ul {
 	margin-bottom: 0;
-	padding-left: 20px;
 	list-style-type: none;
 }
 
@@ -71,8 +71,8 @@ ul ul {
 	list-style-type: square;
 }
 
-section {
-	margin-bottom: 2em;
+.section {
+	margin-top: 3em;
 }
 
 blockquote {
@@ -88,4 +88,20 @@ blockquote {
 #profiles div {
 	display: inline-block;
 	margin-right: 1.2em;
+}
+
+svg {
+	padding-right: 0.25em;
+}
+
+.heavy {
+	font-weight: bold;
+}
+
+.emphasis {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
 }

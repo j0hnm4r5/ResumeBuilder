@@ -4,10 +4,8 @@ block skills
 		ul
 			each skill in skills
 				li.skill
-					h4
-						!= "<strong>" + skill.type + "</strong>"
+					span.heavy= skill.type
 						
 					ul
 						each item in skill.keywords
-							li.keyword
-								!= item
+							li.keyword= item

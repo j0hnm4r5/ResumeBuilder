@@ -1,0 +1,26 @@
+#bio
+	h1#name #{bio.name}
+
+	#contact
+
+		#website
+			a(href=bio.website)
+				i.fas.fa-lg.fa-fw.fa-globe
+				span #{bio.website}
+
+		#email
+			a(href="mailto:" + bio.email)
+				i.fas.fa-lg.fa-fw.fa-envelope
+				span #{bio.email}
+
+		#phone
+			a(href="tel:" + bio.email)
+				i.fas.fa-lg.fa-fw.fa-phone
+				span #{bio.phone}
+
+	#profiles
+		each profile in bio.profiles
+			.profile
+				a(href=profile.url)
+					i(class="fab fa-lg fa-fw fa-" + profile.network.toLowerCase())
+					span #{profile.username}

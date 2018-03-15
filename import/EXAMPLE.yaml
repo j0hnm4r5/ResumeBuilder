@@ -33,10 +33,24 @@
       startDate: 2013-12-01
       summary: Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.
       highlights:
-        - OBuild an algorithm for artist to detect if their music was violating copy right infringement laws
+        - Build an algorithm for artist to detect if their music was violating copy right infringement laws
         - Successfully won Techcrunch Disrupt
         - Optimized an algorithm that holds the current world record for Weisman Scores
-
+    
+    - company: Other Co.
+      position: Nobody
+      location: Pittsburgh, PA
+      startDate: 2011-12-01
+      endDate: 2013-11-01
+      summary: Hello, World!
+    
+    - company: Other Inc.
+      position: Nobody
+      location: Pittsburgh, PA
+      startDate: 2011-09-01
+      endDate: 2011-10-01
+      summary: Hello, World!
+    
   teaching:
     - position: Teaching Assistant
       institution: School of Business
@@ -45,7 +59,7 @@
 
   education: 
 
-    - institution: University of Oklahoma
+    - name: University of Oklahoma
       instAbbr: UO
       location: Oklahoma City, OK
       degree: Bachelors of Information Technology
@@ -60,7 +74,7 @@
   awards: 
 
     - title: Digital Compression Pioneer Award
-      date: 2014-11-01
+      date: "2014-11-01"
       awarder: Techcrunch
 
 
@@ -69,7 +83,7 @@
     - name: Video compression for 3d media
       authors: Hendriks, R.
       publisher: Hooli
-      date: 2014-10-01
+      date: "2014-10-01"
 
   
   skills: 

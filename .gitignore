@@ -4,7 +4,10 @@ export/*
 !import/.gitkeep
 !export/.gitkeep
 
-!import/EXAMPLE.yaml
+!import/example_resume.yaml
+
+.cache
+dist
 
 # Created by https://www.gitignore.io/api/osx,node,macos,windows,visualstudiocode
 

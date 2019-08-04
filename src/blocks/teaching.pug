@@ -1,12 +1,13 @@
-#teaching.section
-	h3 Teaching
-	ul#courses
-		each course in teaching
-			li.course
-				h4.coursePosition
-					span.heavy #{course.position}, 
-					span #{course.institution} 
-					span — 
-					span.emphasis #{course.date}
-				.courseDescription
-					span #{course.description}
+if teaching
+	#teaching.section
+		h3 Teaching
+		ul#courses
+			each course in teaching
+				li.course
+					h4.coursePosition
+						span.heavy #{course.position}, 
+						span #{course.institution} 
+						span — 
+						span.emphasis #{course.date}
+					.courseDescription
+						span #{course.description}

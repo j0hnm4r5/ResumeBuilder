@@ -1,27 +1,28 @@
-#work.section
-	h3 Experience
-	ul#experiences
-		each job in work
-			li.experience
-				h4.job
-					span.heavy #{job.position}, 
-					span #{job.company} 
-					span — 
-					-
-						// creates a date string conditionally based on start and end dates
-						var startDate = new Date(job.startDate).getUTCFullYear();
-						var endDate = "Present";
-						var dates = "" + startDate + " - " + endDate;
-						if (job.hasOwnProperty("endDate")) {
-							endDate = new Date(job.endDate).getUTCFullYear();
-							dates = "" + startDate + " - " + endDate;
-							if (startDate == endDate) {
-								dates = "" + startDate
+if work
+	#work.section
+		h3 Experience
+		ul#experiences
+			each job in work
+				li.experience
+					h4.job
+						span.heavy #{job.position}, 
+						span #{job.company} 
+						span — 
+						-
+							// creates a date string conditionally based on start and end dates
+							var startDate = new Date(job.startDate).getUTCFullYear();
+							var endDate = "Present";
+							var dates = "" + startDate + " - " + endDate;
+							if (job.hasOwnProperty("endDate")) {
+								endDate = new Date(job.endDate).getUTCFullYear();
+								dates = "" + startDate + " - " + endDate;
+								if (startDate == endDate) {
+									dates = "" + startDate
+								}
 							}
-						}
-					span.emphasis #{dates}
+						span.emphasis #{dates}
 
-				if job.highlights
-					ul
-						each highlight in job.highlights
-							li.jobHighlight #{highlight}
+					if job.highlights
+						ul
+							each highlight in job.highlights
+								li.jobHighlight #{highlight}

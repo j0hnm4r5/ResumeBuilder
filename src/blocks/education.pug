@@ -1,17 +1,29 @@
-#education.section
-	h3 Education
+if education
+	#education.section
+		h3 Education
 
-	ul#schools
-		each institution in education
-			li.institution
-				span.heavy #{institution.degree} (#{institution.degAbbr}), 
-				span #{institution.name} (#{institution.instAbbr}) 
-				span — 
-				span.emphasis #{new Date(institution.endDate).getUTCFullYear()}
-				
-				//- optional curriculum
-				if institution.curriculum
-					ul
-						span.underline Curriculum
-						each course in institution.curriculum
-							li.course #{course}
+		ul#schools
+			each institution in education
+				li.institution
+					span.heavy #{institution.degree} (#{institution.degAbbr}), 
+					span #{institution.name} (#{institution.instAbbr}) 
+					span — 
+					-
+						// creates a date string conditionally based on start and end dates
+						var startDate = new Date(institution.startDate).getUTCFullYear();
+						var endDate = "Present";
+						var dates = "" + startDate + " - " + endDate;
+						if (institution.hasOwnProperty("endDate")) {
+							endDate = new Date(institution.endDate).getUTCFullYear();
+							dates = "" + startDate + " - " + endDate;
+							if (startDate == endDate) {
+								dates = "" + startDate
+							}
+						}
+					span.emphasis #{dates}
+					
+					//- optional curriculum
+					if institution.curriculum
+						ul
+							each course in institution.curriculum
+								li.course #{course}

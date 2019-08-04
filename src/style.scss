@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Roboto+Condensed:300,300i,400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:300,300i,400,400i,700,700i");
 
 html {
 	font-size: 10pt;
@@ -6,14 +6,14 @@ html {
 
 body {
 	background-color: white;
-	font-family: "Fira Mono", monospace;
+	font-family: "Open Sans", monospace;
 	line-height: 1.45;
 	color: #333;
 	margin: 50px;
 }
 
 p {
-	line-height: 1.4;
+	line-height: 1.2;
 }
 
 h1,
@@ -104,4 +104,9 @@ svg {
 
 .underline {
 	text-decoration: underline;
+}
+
+.experience {
+	page-break-inside: avoid;
+	page-break-after: auto;
 }
